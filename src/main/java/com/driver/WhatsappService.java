@@ -8,8 +8,12 @@ import java.util.Optional;
 
 public class WhatsappService {
 
-    @Autowired
-    WhatsappRepository whatsappRepository;
+    public WhatsappService(WhatsappRepository whatsappRepository) {
+        this.whatsappRepository = whatsappRepository;
+    }
+
+
+    WhatsappRepository whatsappRepository=new WhatsappRepository();
     public String createUser(String name, String mobile) throws Exception {
         return whatsappRepository.createUser(name,mobile);
     }
@@ -21,6 +25,9 @@ public class WhatsappService {
     public int createMessage(String content) {
 
         return whatsappRepository.createMessage(content);
+    }
+
+    public WhatsappService() {
     }
 
     public int sendMessage(Message message, User sender, Group group) throws Exception {

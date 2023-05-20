@@ -22,6 +22,13 @@ public class WhatsappController {
     //Autowire will not work in this case, no need to change this and add autowire
     WhatsappService whatsappService = new WhatsappService();
 
+    public WhatsappController() {
+    }
+
+    public WhatsappController(WhatsappService whatsappService) {
+        this.whatsappService = whatsappService;
+    }
+
     @PostMapping("/add-user")
     public String createUser(String name, String mobile) throws Exception {
         //If the mobile number exists in database, throw "User already exists" exception

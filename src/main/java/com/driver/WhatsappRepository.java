@@ -11,7 +11,22 @@ public class WhatsappRepository {
     //You can use the below mentioned hashmaps or delete these and create your own.
 //    private HashMap<Group, List<User>> groupUserMap;
 //    private HashMap<Group, List<Message>> groupMessageMap;
+
+    public WhatsappRepository(Map<String, User> usersMap, Map<String, Group> groupsMap, Map<Group, List<User>> groupUserMap, Map<Group, List<Message>> groupMessageMap, Map<Message, User> senderMap, Map<Group, User> adminMap, Set<String> userMobileSet, int customGroupCount, int messageId) {
+        this.usersMap = usersMap;
+        this.groupsMap = groupsMap;
+        this.groupUserMap = groupUserMap;
+        this.groupMessageMap = groupMessageMap;
+        this.senderMap = senderMap;
+        this.adminMap = adminMap;
+        this.userMobileSet = userMobileSet;
+        this.customGroupCount = customGroupCount;
+        this.messageId = messageId;
+    }
 //    private HashMap<Message, User> senderMap;
+
+    public WhatsappRepository() {
+    }
 //    private HashMap<Group, User> adminMap;
 //    private HashSet<String> userMobile;
 //    private int customGroupCount;
@@ -28,6 +43,78 @@ public class WhatsappRepository {
     private int messageId;
 
 //    private Map<String, User> usersMap;
+
+    public Map<String, User> getUsersMap() {
+        return usersMap;
+    }
+
+    public void setUsersMap(Map<String, User> usersMap) {
+        this.usersMap = usersMap;
+    }
+
+    public Map<String, Group> getGroupsMap() {
+        return groupsMap;
+    }
+
+    public void setGroupsMap(Map<String, Group> groupsMap) {
+        this.groupsMap = groupsMap;
+    }
+
+    public Map<Group, List<User>> getGroupUserMap() {
+        return groupUserMap;
+    }
+
+    public void setGroupUserMap(Map<Group, List<User>> groupUserMap) {
+        this.groupUserMap = groupUserMap;
+    }
+
+    public Map<Group, List<Message>> getGroupMessageMap() {
+        return groupMessageMap;
+    }
+
+    public void setGroupMessageMap(Map<Group, List<Message>> groupMessageMap) {
+        this.groupMessageMap = groupMessageMap;
+    }
+
+    public Map<Message, User> getSenderMap() {
+        return senderMap;
+    }
+
+    public void setSenderMap(Map<Message, User> senderMap) {
+        this.senderMap = senderMap;
+    }
+
+    public Map<Group, User> getAdminMap() {
+        return adminMap;
+    }
+
+    public void setAdminMap(Map<Group, User> adminMap) {
+        this.adminMap = adminMap;
+    }
+
+    public Set<String> getUserMobileSet() {
+        return userMobileSet;
+    }
+
+    public void setUserMobileSet(Set<String> userMobileSet) {
+        this.userMobileSet = userMobileSet;
+    }
+
+    public int getCustomGroupCount() {
+        return customGroupCount;
+    }
+
+    public void setCustomGroupCount(int customGroupCount) {
+        this.customGroupCount = customGroupCount;
+    }
+
+    public int getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(int messageId) {
+        this.messageId = messageId;
+    }
 //    private Map<String, Group> groupsMap;
 //    private List<Message> messagesList;
 
