@@ -14,11 +14,11 @@ public class Message {
     private String content;
     private Date timestamp=new Date();
 
-//    public Message(int id, String content, Date timestamp) {
-//        this.id = id;
-//        this.content = content;
-//        this.timestamp = ;
-//    }
+    public Message(int id, String content, Date timestamp) {
+        this.id = id;
+        this.content = content;
+        this.timestamp = timestamp;
+    }
 
     public Message() {
     }
@@ -44,6 +44,8 @@ public class Message {
     }
 
 //    public void setTimestamp(Date timestamp) {
+
+
 //        this.timestamp = timestamp;
 //    }
 }
